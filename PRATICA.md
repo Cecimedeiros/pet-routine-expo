@@ -1,4 +1,4 @@
-# Práticas — Aula 1
+# Prática 1
 
 > **Disciplina:** Desenvolvimento Mobile (2026.2.DM) — CESAR School
 > **Domínio destas práticas:** **App de Gestão e Rotina Pet** (`Pet`).
@@ -18,24 +18,9 @@ Se travar, a **tabela de equivalência** no final deste arquivo mostra o paralel
 
 > 📌 **Como funciona o esqueleto.** Onde você vir `/* … */` ou um comentário `TODO`, é sua vez de escrever. O que já está escrito **não deve ser apagado** — em particular, os blocos marcados como *verificação* existem para provar que sua solução está certa: alguns precisam compilar, outros precisam **falhar** na compilação.
 
-> ⚠️ **Escopo.** Tudo aqui é **TypeScript puro** — nenhuma prática desta aula precisa de React Native ou de projeto Expo. Componentes de tela chegam na Aula 2; listas (`FlatList`, `SectionList`), nas próximas aulas.
-
-### Setup
-
-```bash
-node --version                    # precisa ser 22.11 ou superior
-
-mkdir pratica01-pet && cd pratica01-pet
-npm init -y
-npm add -D "typescript@^6"        # a disciplina fixa a linha 6.x
-npx tsc --init --strict
-```
-
-Verifique sempre com `npx tsc --noEmit`. Para rodar de fato: `npx tsx arquivo.ts`.
-
 ---
 
-## Prática 1 — Modelagem do domínio Pet
+## Prática 1.1 — Modelagem do domínio Pet
 
 **Nível:** ⭐⭐ · **Tempo estimado:** 45 min · **Arquivo:** `src/types/pet.ts`
 
@@ -137,7 +122,7 @@ Acrescente o campo `microchip: string` à interface `Pet`. **Quantos dos três t
 
 ---
 
-## Prática 2 — Serviço mockado e estado de tela
+## Prática 1.2 — Serviço mockado e estado de tela
 
 **Nível:** ⭐⭐ · **Tempo estimado:** 30 min · **Arquivos:** `src/services/petService.ts` e `src/tela-pet.ts`
 
@@ -275,7 +260,7 @@ Os dois arquivos completos, mais **três linhas de comentário** no topo de `tel
 
 ---
 
-## Prática 3 — Relatório de decisão de plataforma
+## Prática 1.3 — Relatório de decisão de plataforma
 
 **Nível:** ⭐⭐ · **Tempo estimado:** 1 h · **Entrega:** individual · **Formato:** 1 a 2 páginas
 
