@@ -1,5 +1,5 @@
 // ============================================================
-// Prática 2 — Estado de tela (arquivo 2 de 2)
+// Prática 1.2 — Estado de tela (arquivo 2 de 2)
 // Leia o enunciado completo em `PRATICA.md` › "Prática 2".
 //
 // A lógica da tela, ainda sem tela. Componentes chegam na Aula 2 —
@@ -7,7 +7,7 @@
 // ============================================================
 
 // ------------------------------------------------------------
-// TODO P2.9 — "O que entregar": responda as três perguntas abaixo,
+// TODO P1.2.9 — "O que entregar": responda as três perguntas abaixo,
 //   uma linha cada, antes de entregar.
 //
 //   1. Qual estado impossível a união discriminada torna não representável?
@@ -23,7 +23,7 @@ import { rotuloEspecie, rotuloStatusPasseio } from './types/pet';
 import { buscarPetDoUsuario } from './services/petService';
 
 // ============================================================
-// TODO P2.6 — união discriminada pelo campo `tipo`, três variantes:
+// TODO P1.2.6 — união discriminada pelo campo `tipo`, três variantes:
 //   'carregando'  → nenhum outro campo
 //   'sucesso'     → dados: T
 //   'erro'        → mensagem: string
@@ -31,7 +31,7 @@ import { buscarPetDoUsuario } from './services/petService';
 export type EstadoTela<T> = /* … */ never;
 
 // ============================================================
-// TODO P2.7 — devolva o texto que a tela mostraria em cada estado.
+// TODO P1.2.7 — devolva o texto que a tela mostraria em cada estado.
 //   Use SOMENTE os campos que existem em cada variante.
 //   Não escreva `default`.
 //     carregando → 'Carregando…'
@@ -43,7 +43,7 @@ export function descreverTela(estado: EstadoTela<Pet>): string {
 }
 
 // ============================================================
-// TODO P2.8 — carregue o pet e devolva o EstadoTela resultante.
+// TODO P1.2.8 — carregue o pet e devolva o EstadoTela resultante.
 //   Sucesso → { tipo: 'sucesso', dados }
 //   Falha   → { tipo: 'erro', mensagem }  (nunca deixe a exceção escapar)
 //   Lembre: em TypeScript o `catch` recebe `unknown`, não `Error`.

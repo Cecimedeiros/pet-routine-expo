@@ -39,7 +39,7 @@ Regras do domínio que você precisa respeitar:
 
 ```ts
 // ============================================================
-// TODO P1.1 — Union types literais. Nenhum destes pode ser `string`.
+// TODO P1.1.1 — Union types literais. Nenhum destes pode ser `string`.
 //   EspeciePet     → cachorro, gato, ave, outro
 //   PortePet       → pequeno, medio, grande
 //   StatusPasseio  → pendente, concluido, cancelado
@@ -49,7 +49,7 @@ export type PortePet = /* … */;
 export type StatusPasseio = /* … */;
 
 // ============================================================
-// TODO P1.2 — A entidade completa, como ela virá do servidor um dia.
+// TODO P1.1.2 — A entidade completa, como ela virá do servidor um dia.
 //   Campos: id, nome, especie, porte, statusPasseio, idadeMeses, criadoEm.
 //   Pense no tipo de cada um. Você vai justificar uma dessas escolhas
 //   na Prática 2.
@@ -59,7 +59,7 @@ export interface Pet {
 }
 
 // ============================================================
-// TODO P1.3 — Tipos DERIVADOS. Use utility types; não redigite campos.
+// TODO P1.1.3 — Tipos DERIVADOS. Use utility types; não redigite campos.
 //   NovoPet         → o que o formulário de cadastro envia
 //   ResumoPet       → o que o card da lista "Meus pets" precisa
 //   AtualizacaoPet  → edição parcial de um pet já cadastrado
@@ -69,7 +69,7 @@ export type ResumoPet = /* … */;
 export type AtualizacaoPet = /* … */;
 
 // ============================================================
-// TODO P1.4 — Rótulos legíveis, com switch exaustivo e SEM `default`.
+// TODO P1.1.4 — Rótulos legíveis, com switch exaustivo e SEM `default`.
 // ============================================================
 export function rotuloStatusPasseio(status: StatusPasseio): string {
   /* … */
@@ -143,7 +143,7 @@ const SIMULAR_ERRO = false;
 
 const ATRASO_MS = 1000;   // para o estado de carregando ser visível
 
-// TODO P2.1 — declare o pet mockado. Ele precisa satisfazer `Pet` inteiro;
+// TODO P1.2.1 — declare o pet mockado. Ele precisa satisfazer `Pet` inteiro;
 //   não use `as` para escapar de campos faltando.
 const MOCK: Pet = {
   /* … */
@@ -154,13 +154,13 @@ const MOCK: Pet = {
  * à que uma chamada HTTP real teria, para a troca ser indolor.
  */
 export async function buscarPetDoUsuario(): Promise<Pet> {
-  // TODO P2.2 — espere ATRASO_MS antes de responder.
+  // TODO P1.2.2 — espere ATRASO_MS antes de responder.
   //   Dica: `await new Promise((r) => setTimeout(r, ATRASO_MS));`
 
-  // TODO P2.3 — se SIMULAR_ERRO for true, lance um Error com mensagem legível
+  // TODO P1.2.3 — se SIMULAR_ERRO for true, lance um Error com mensagem legível
   //   para o usuário final — não um stack trace.
 
-  // TODO P2.4 — devolva o MOCK.
+  // TODO P1.2.4 — devolva o MOCK.
   /* … */
 }
 
@@ -169,7 +169,7 @@ export async function buscarPetDoUsuario(): Promise<Pet> {
  * status atualizado; persistência é assunto de aula futura.
  */
 export async function registrarPasseio(pet: Pet): Promise<Pet> {
-  // TODO P2.5 — devolva uma CÓPIA do pet com statusPasseio 'concluido'.
+  // TODO P1.2.5 — devolva uma CÓPIA do pet com statusPasseio 'concluido'.
   //   Não mute o objeto recebido.
   /* … */
 }
@@ -185,7 +185,7 @@ import { rotuloEspecie, rotuloStatusPasseio } from './types/pet';
 import { buscarPetDoUsuario } from './services/petService';
 
 // ============================================================
-// TODO P2.6 — união discriminada pelo campo `tipo`, três variantes:
+// TODO P1.2.6 — união discriminada pelo campo `tipo`, três variantes:
 //   'carregando'  → nenhum outro campo
 //   'sucesso'     → dados: T
 //   'erro'        → mensagem: string
@@ -193,7 +193,7 @@ import { buscarPetDoUsuario } from './services/petService';
 export type EstadoTela<T> = /* … */;
 
 // ============================================================
-// TODO P2.7 — devolva o texto que a tela mostraria em cada estado.
+// TODO P1.2.7 — devolva o texto que a tela mostraria em cada estado.
 //   Use SOMENTE os campos que existem em cada variante.
 //   Não escreva `default`.
 //     carregando → 'Carregando…'
@@ -205,7 +205,7 @@ export function descreverTela(estado: EstadoTela<Pet>): string {
 }
 
 // ============================================================
-// TODO P2.8 — carregue o pet e devolva o EstadoTela resultante.
+// TODO P1.2.8 — carregue o pet e devolva o EstadoTela resultante.
 //   Sucesso → { tipo: 'sucesso', dados }
 //   Falha   → { tipo: 'erro', mensagem }  (nunca deixe a exceção escapar)
 // ============================================================

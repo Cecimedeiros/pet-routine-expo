@@ -1,9 +1,9 @@
 <!--
-  Prática 4 — Caça ao material desatualizado (OPCIONAL, bônus)
+  Prática 1.4 — Caça ao material desatualizado (OPCIONAL, bônus)
   Nível ⭐ · ~30 min
-  Enunciado completo: `PRATICA.md` › "Prática 4".
+  Enunciado completo: `PRATICA.md` › "Prática 1.4".
 
-  TODO P4 — encontre DOIS tutoriais ou artigos de desenvolvimento mobile
+  TODO P1.4 — encontre DOIS tutoriais ou artigos de desenvolvimento mobile
   factualmente desatualizados e preencha uma ficha para cada.
 
   Sinais de alerta vistos na Aula 1:
